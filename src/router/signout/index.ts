@@ -1,9 +1,6 @@
 import express, { Request, Response } from "express";
 import { deleteSession } from "../../lib/sessionOperations";
 
-type jwtId = {
-  id: string;
-};
 const signoutRoute = express.Router();
 signoutRoute.get("/", async (req: Request, res: Response) => {
   const token = req.headers["x-auth-token"] as string | undefined;
@@ -11,7 +8,9 @@ signoutRoute.get("/", async (req: Request, res: Response) => {
     res.status(402).json({ error: "Forbidden path" });
     return;
   }
+
   await deleteSession(token);
+
   res.json({ signout: true });
 });
 

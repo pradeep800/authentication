@@ -20,8 +20,7 @@ async function checkAuth(req: Request, res: Response, next: NextFunction) {
   }
   //check if token is also present in database
   const tokenInDb = await Session.findOne({ sessionToken: token });
-  if (tokenInDb) {
-  } else {
+  if (!tokenInDb) {
     res.status(402).json({ error: "Wrong Jwt" });
     return;
   }
