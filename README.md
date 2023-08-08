@@ -9,9 +9,9 @@
 
 ### Login With Google and Facebook
 
-1. you can check / or terminal log there is OathUrl for google and face copy and past on your browser
-2. Do necessary step to authenticate and you will get sessionToken which is valid for 7 days
-3. You can send request to /protected-route with including x-auth-token header with value of sessionToken
+1. You can verify by checking the terminal log for the OathUrl related to Google and Facebook. Copy and paste it into your web browser.
+2. Follow the required steps for authentication, and you will receive a sessionToken that remains valid for 7 days.
+3. To send a request to the /protected-route, make sure to include the x-auth-token header with the sessionToken value.
 
 ## Postman documentation
 
