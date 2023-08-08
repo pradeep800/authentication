@@ -12,8 +12,10 @@ function getFacebookAuthUrl() {
 
   const queryString = new URLSearchParams(options);
   console.log(
-    "Click on given below url for getting authenticated with facebook"
+    "Click on given below url for getting authenticated with facebook(FacebookOauthUrl)"
   );
-  console.log(`${rootUrl}?${queryString.toString()}`); //
+  const facebookOathUrl = `${rootUrl}?${queryString.toString()}`;
+  console.log(facebookOathUrl);
+  return facebookOathUrl;
 }
 export { getFacebookAuthUrl };

@@ -27,13 +27,15 @@ if (areAllEnvPresent) {
   /*
   Print google and facebook auth url
 */
-  getGoogleAuthUrl();
-  getFacebookAuthUrl();
+  const googleOathUrl = getGoogleAuthUrl();
+  const facebookOathUrl = getFacebookAuthUrl();
 
   /*
    only authenticated user can use this route
   */
-
+  app.get("/", (req: Request, res: Response) => {
+    res.json({ googleOathUrl, facebookOathUrl });
+  });
   app.use("/login", loginRoute);
   app.use("/register", registerRoute);
   app.use("/signout", signoutRoute);

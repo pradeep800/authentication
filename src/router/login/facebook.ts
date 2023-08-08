@@ -1,6 +1,5 @@
 import express, { Request, Response } from "express";
 import { logErrorAndRespond } from "../../lib/log-error-and-respond";
-import jwt from "jsonwebtoken";
 import { getOrCreateUserForFacebook } from "../../lib/get-or-create-user";
 import { createSession } from "../../lib/sessionOperations";
 import { facebookAuthUrls } from "../../static/facebook-auth-urls";
