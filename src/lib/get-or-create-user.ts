@@ -38,7 +38,11 @@ async function getOrCreateUserForFacebook(facebookInfo: FacebookType) {
   }
 }
 async function createUserEP(email: string, password: string) {
-  const user = await User.create({ email, password });
+  const user = await User.create({
+    email,
+    password,
+    method: "EMAILANDPASSWORD",
+  });
   return user;
 }
 
