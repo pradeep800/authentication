@@ -18,7 +18,9 @@ function getGoogleAuthUrl() {
   };
 
   const queryString = new URLSearchParams(options);
-  console.log("Click on given below url for getting authenticated with google");
+  console.log(
+    "Click on given below url for getting authenticated with google(GoogleOathUrl)"
+  );
   const googleOathUrl = `${rootUrl}?${queryString.toString()}`;
   console.log(googleOathUrl);
   return googleOathUrl;

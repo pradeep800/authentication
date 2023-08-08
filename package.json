@@ -6,6 +6,7 @@
   "type": "commonjs",
   "scripts": {
     "dev": "concurrently \"npx tsc --watch\" \"nodemon ./build/index.js\"",
+    "build": "npx tsc",
     "start": "node ./build/index.js"
   },
   "keywords": [],

@@ -4,8 +4,9 @@
 2. Change the directory `cd authentication`
 3. Create .env file and add .env.example environment variables
 4. Install the dependency `npm install`
-5. Start a development server `npm run start`
-6. Check terminal logs or go to 'http://localhost:3008/'
+5. compile ts to js with `npm run build`
+6. Start a development server `npm run start`
+7. Check terminal logs or go to 'http://localhost:3008/'
 
 ### Login With Google and Facebook
 
